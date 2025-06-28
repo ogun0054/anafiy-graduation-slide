@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-Hanafi Graduation Ceremony</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Logo Container -->
+    <!-- <div class="logo-container">
+      <img
+        src="./assets/hanafiy-logo-removebg-preview.png"
+        alt="Al-Hanafi Logo"
+        class="logo"
+      />
+      <div class="logo-text">Knowledge is the greatest achievement</div>
+    </div> -->
+
+    <!-- Presentation Container -->
+    <div class="presentation-container">
+      <!-- Cover Slide -->
+      <div class="slide active" id="cover">
+        <div class="slide-content">
+          <img
+            src="./assets/hanafiy-logo-removebg-preview.png"
+            alt="Al-Hanafi Logo"
+            class="cover-logo animate"
+          />
+          <div class="academy-name animate">أكاديمية الحنفي الدولية</div>
+          <h1 class="cover-title animate">Graduation Ceremony</h1>
+          <div class="cover-subtitle animate">
+            الحفلة الثانوية والإعدادية والابتدائية
+          </div>
+          <div class="date-time animate">
+            <i class="fas fa-calendar-alt"></i> July 6, 2025
+            <i class="fas fa-clock" style="margin-left: 20px"></i> 10:00 AM
+          </div>
+          <div class="event-desc animate">
+            Honoring our graduates for their achievements and dedication
+          </div>
+        </div>
+      </div>
+
+      <!-- Agenda Slide -->
+      <div class="slide" id="agenda">
+        <div class="slide-content">
+          <div class="slide-number">02</div>
+          <h2 class="event-title animate">Ceremony Agenda</h2>
+          <div class="event-title-arabic animate">جدول الحفل</div>
+
+          <div class="agenda-grid">
+            <div class="agenda-item animate" data-target="slide1">
+              <div class="agenda-number">1</div>
+              <i
+                class="fas fa-pray"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Opening Prayer</div>
+              <div class="agenda-time">10:00 AM - 10:05 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide2">
+              <div class="agenda-number">2</div>
+              <i
+                class="fas fa-book-quran"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Qur'an Recitation</div>
+              <div class="agenda-time">10:05 AM - 10:15 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide3">
+              <div class="agenda-number">3</div>
+              <i
+                class="fas fa-school"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Academy Introduction</div>
+              <div class="agenda-time">10:15 AM - 10:25 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide4">
+              <div class="agenda-number">4</div>
+              <i
+                class="fas fa-users"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Special Guests</div>
+              <div class="agenda-time">10:25 AM - 10:35 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide5">
+              <div class="agenda-number">5</div>
+              <i
+                class="fas fa-microphone"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Welcome Address</div>
+              <div class="agenda-time">10:35 AM - 10:50 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide6">
+              <div class="agenda-number">6</div>
+              <i
+                class="fas fa-user-graduate"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Graduands Presentation</div>
+              <div class="agenda-time">10:50 AM - 11:15 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide7">
+              <div class="agenda-number">7</div>
+              <i
+                class="fas fa-chalkboard-teacher"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Keynote Lecture 1</div>
+              <div class="agenda-time">11:15 AM - 11:45 AM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide8">
+              <div class="agenda-number">8</div>
+              <i
+                class="fas fa-chalkboard"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Keynote Lecture 2</div>
+              <div class="agenda-time">11:45 AM - 12:15 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide9">
+              <div class="agenda-number">9</div>
+              <i
+                class="fas fa-presentation"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Graduands' Presentation</div>
+              <div class="agenda-time">12:15 PM - 12:45 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide10">
+              <div class="agenda-number">10</div>
+              <i
+                class="fas fa-hands-helping"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Words of Advice</div>
+              <div class="agenda-time">12:45 PM - 1:05 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide11">
+              <div class="agenda-number">11</div>
+              <i
+                class="fas fa-music"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Cultural Interlude</div>
+              <div class="agenda-time">1:05 PM - 1:25 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide12">
+              <div class="agenda-number">12</div>
+              <i
+                class="fas fa-award"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Awards & Gifts</div>
+              <div class="agenda-time">1:25 PM - 1:45 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide13">
+              <div class="agenda-number">13</div>
+              <i
+                class="fas fa-question-circle"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Q&A Session</div>
+              <div class="agenda-time">1:45 PM - 2:05 PM</div>
+            </div>
+
+            <div class="agenda-item animate" data-target="slide14">
+              <div class="agenda-number">14</div>
+              <i
+                class="fas fa-praying-hands"
+                style="
+                  font-size: 2.2rem;
+                  color: var(--accent);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <div class="agenda-title">Closing Prayer</div>
+              <div class="agenda-time">2:05 PM - 2:10 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 1: Opening Prayer -->
+      <div class="slide" id="slide1">
+        <div class="slide-content">
+          <div class="slide-number">01</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Opening Prayer</h2>
+          <div class="event-title-arabic animate">الدعاء الافتتاحية</div>
+          <div class="event-desc animate">
+            The ceremony begins with a heartfelt prayer to seek blessings for
+            the event and all participants.
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 10:00 AM - 10:05 AM
+          </div>
+
+          <div class="director-message animate">
+            <div class="director-title">Spiritual Significance</div>
+            <div class="message-content">
+              <p>
+                In the tradition of Islamic gatherings, we commence our ceremony
+                with a prayer to seek Allah's blessings and guidance. This
+                prayer sets the spiritual tone for the event and reminds us of
+                the sacred nature of knowledge.
+              </p>
+              <p>
+                The opening prayer will be led by Imam Yusuf Abdulrahman, who
+                has been serving as the spiritual guide for our academy for the
+                past five years. His deep connection with the Quran and Sunnah
+                makes him the perfect choice to inaugurate this blessed event.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Qur'an Recitation -->
+      <div class="slide" id="slide2">
+        <div class="slide-content">
+          <div class="slide-number">02</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">
+            Recitation from the Glorious Qur'an
+          </h2>
+          <div class="event-title-arabic animate">تلاوة من القرآن الكريم</div>
+          <div class="event-desc animate">
+            Beautiful recitation of selected verses from the Holy Quran by our
+            talented students.
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 10:05 AM - 10:15 AM
+          </div>
+
+          <div class="animate" style="margin-top: 30px">
+            <h3 class="event-title" style="font-size: 1.8rem">Reciters:</h3>
+
+            <div class="graduands-container">
+              <div class="graduand-card animate">
+                <div class="graduand-photo">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="graduand-name">Amina Yusuf</div>
+                <div class="graduand-name-arabic">أمينة يوسف</div>
+                <div class="graduand-details">
+                  Surah Ar-Rahman (verses 1-30)<br />
+                  Grade 12 Graduate
+                </div>
+              </div>
+
+              <div class="graduand-card animate">
+                <div class="graduand-photo">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="graduand-name">Bilal Hassan</div>
+                <div class="graduand-name-arabic">بلال حسن</div>
+                <div class="graduand-details">
+                  Surah Al-Mulk (complete)<br />
+                  Grade 10 Graduate
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Academy Introduction -->
+      <div class="slide" id="slide3">
+        <div class="slide-content">
+          <div class="slide-number">03</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Academy Introduction</h2>
+          <div class="event-title-arabic animate">مقدمة عن الأكاديمية</div>
+          <div class="event-desc animate">
+            An overview of Al-Hanafi International Academy's mission, vision,
+            and achievements.
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 10:15 AM - 10:25 AM
+          </div>
+
+          <div class="director-message animate">
+            <div class="message-content">
+              <p>
+                Founded in 2020, Al-Hanafi International Academy has grown to
+                become a leading institution in Islamic education. Our mission
+                is to provide authentic Islamic knowledge while integrating
+                contemporary educational methodologies.
+              </p>
+
+              <h3 class="director-title" style="margin-top: 20px">
+                Our Achievements
+              </h3>
+              <ul style="margin-top: 15px; padding-left: 20px">
+                <li>Over 500 students graduated since inception</li>
+                <li>98% student satisfaction rate</li>
+                <li>
+                  Recipient of the 2024 Excellence in Islamic Education Award
+                </li>
+                <li>Partnerships with 15 international Islamic institutions</li>
+              </ul>
+
+              <h3 class="director-title" style="margin-top: 20px">
+                Our Vision
+              </h3>
+              <p style="margin-top: 10px">
+                To cultivate a generation of scholars who are grounded in
+                authentic Islamic tradition while being equipped to address
+                contemporary challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Welcome Address -->
+      <div class="slide" id="slide5">
+        <div class="slide-content">
+          <div class="slide-number">05</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Welcome Address</h2>
+          <div class="event-title-arabic animate">كلمة الترحيب</div>
+          <div class="event-desc animate">
+            Formal welcome address by the Academy Director, Ustadh Basheer
+            Hanafiy.
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 10:35 AM - 10:50 AM
+          </div>
+
+          <div class="lecturer-card animate">
+            <div class="lecturer-photo">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="lecturer-details">
+              <h3 class="lecturer-name">Ustadh Basheer Hanafiy</h3>
+              <div class="lecturer-title">
+                Director, Al-Hanafi International Academy
+              </div>
+              <div class="lecturer-bio">
+                <p>
+                  With over 15 years of experience in Islamic education, Ustadh
+                  Basheer has been instrumental in shaping the academy's vision
+                  and curriculum. A graduate of the Islamic University of
+                  Madinah, he specializes in Fiqh and Islamic Jurisprudence.
+                </p>
+                <p>
+                  Under his leadership, the academy has grown from a small study
+                  group to an internationally recognized institution with
+                  students from over 20 countries. His dedication to authentic
+                  Islamic knowledge combined with modern teaching methodologies
+                  has transformed the lives of countless students.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="director-message animate">
+            <div class="director-title">Director's Message Excerpt</div>
+            <div class="message-content">
+              <p>
+                "Today marks a significant milestone in the journey of our
+                graduates. As they stand at the threshold of a new chapter, I am
+                reminded of the prophetic tradition that emphasizes the pursuit
+                of knowledge from cradle to grave. Our graduates have shown
+                exceptional dedication in their studies, and today we celebrate
+                not just their academic achievements, but their spiritual growth
+                and commitment to serving the Ummah."
+              </p>
+              <p>
+                "The challenges facing our Ummah today require scholars who are
+                deeply rooted in authentic Islamic tradition while being able to
+                address contemporary issues. I am confident that our graduates
+                possess this balance and will be beacons of light in their
+                communities."
+              </p>
+            </div>
+            <div class="signature">- Ustadh Basheer Hanafiy</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: Graduands Presentation -->
+      <div class="slide" id="slide6">
+        <div class="slide-content">
+          <div class="slide-number">06</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Graduands Presentation</h2>
+          <div class="event-title-arabic animate">تقديم الخريجين</div>
+          <div class="event-desc animate">
+            Celebrating the achievements of our graduating students
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 10:50 AM - 11:15 AM
+          </div>
+
+          <div class="graduands-container">
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Zubair Abdulvekeen</div>
+              <div class="graduand-name-arabic">زبير عبد البقين</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Advanced Islamic Studies<br />
+                <strong>Achievements:</strong> Perfect GPA, Quran
+                Memorization<br />
+                <strong>Future Plans:</strong> Pursuing Ifta program
+              </div>
+            </div>
+
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Adejumọ Idris Oriyomi</div>
+              <div class="graduand-name-arabic">أدجمو إدريس أوربيومي</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Arabic Language & Literature<br />
+                <strong>Achievements:</strong> Best Research Paper<br />
+                <strong>Future Plans:</strong> Translation studies
+              </div>
+            </div>
+
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Mudassir Muhammad Jamiu</div>
+              <div class="graduand-name-arabic">مدثر محمد الجامع</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Quranic Studies<br />
+                <strong>Achievements:</strong> Complete Tajweed mastery<br />
+                <strong>Future Plans:</strong> Quran teaching academy
+              </div>
+            </div>
+
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Yunus Abdulmalik Adedayo</div>
+              <div class="graduand-name-arabic">يونس عبدالملك أديديو</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Islamic Law & Jurisprudence<br />
+                <strong>Achievements:</strong> Debate champion<br />
+                <strong>Future Plans:</strong> Sharia court training
+              </div>
+            </div>
+
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Bukola Muhammad Omolola</div>
+              <div class="graduand-name-arabic">بوكولا محمد أومالوالا</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Islamic Education<br />
+                <strong>Achievements:</strong> Community service award<br />
+                <strong>Future Plans:</strong> Establishing a madrasah
+              </div>
+            </div>
+
+            <div class="graduand-card animate">
+              <div class="graduand-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="graduand-name">Abdulwahab Shukurat Adedoyin</div>
+              <div class="graduand-name-arabic">شكورة عبد الوهاب أديدوين</div>
+              <div class="graduand-details">
+                <strong>Program:</strong> Islamic History & Civilization<br />
+                <strong>Achievements:</strong> Research on Islamic Spain<br />
+                <strong>Future Plans:</strong> Academic research
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: Keynote Lecture 1 -->
+      <div class="slide" id="slide7">
+        <div class="slide-content">
+          <div class="slide-number">07</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Keynote Lecture 1</h2>
+          <div class="event-title-arabic animate">المحاضرة الرئيسية الأولى</div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 11:15 AM - 11:45 AM
+          </div>
+
+          <div class="topic-card animate">
+            <h3 class="topic-title">
+              CHALLENGES FACED BY STUDENTS OF KNOWLEDGE AFTER GRADUATION
+            </h3>
+            <div class="topic-title-arabic">
+              المواجهات التي ينبغيها طلبة العلم بعد التخزين أسباب وحلول
+            </div>
+
+            <div class="lecturer-card">
+              <div class="lecturer-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="lecturer-details">
+                <h3 class="lecturer-name">Shaykh Rasheed Salahudeen Omotoso</h3>
+                <div class="lecturer-title">
+                  BSc Computer Science, BEd Islamic Studies
+                </div>
+                <div class="lecturer-bio">
+                  Shaykh Rasheed is a renowned Islamic scholar and educator with
+                  a unique background in both Islamic and secular education.
+                  After completing his degree in Computer Science at the
+                  University of Ibadan, he pursued Islamic Studies at Majmaa
+                  University. This dual perspective allows him to address
+                  contemporary challenges faced by graduates in the modern
+                  world.
+                  <br /><br />
+                  With over 12 years of teaching experience, Shaykh Rasheed has
+                  developed specialized programs to help graduates transition
+                  into their roles as community leaders and educators. His
+                  research focuses on the integration of traditional Islamic
+                  knowledge with contemporary educational methodologies.
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-abstract">
+              <p>
+                <strong>Abstract:</strong> This lecture addresses the critical
+                transition period that students of knowledge face after
+                graduation. Drawing from both classical Islamic texts and
+                contemporary case studies, Shaykh Rasheed will explore:
+              </p>
+              <ul style="margin-top: 15px; padding-left: 20px">
+                <li>
+                  The psychological shift from structured learning to
+                  independent scholarship
+                </li>
+                <li>
+                  Navigating community expectations while maintaining authentic
+                  scholarship
+                </li>
+                <li>
+                  Balancing family responsibilities with continued education and
+                  da'wah
+                </li>
+                <li>
+                  Strategies for lifelong learning and avoiding scholarly
+                  stagnation
+                </li>
+                <li>
+                  Financial sustainability while remaining true to scholarly
+                  principles
+                </li>
+              </ul>
+              <p style="margin-top: 15px">
+                This essential talk provides practical solutions grounded in
+                Islamic tradition to help graduates thrive in their
+                post-academic journeys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 8: Keynote Lecture 2 -->
+      <div class="slide" id="slide8">
+        <div class="slide-content">
+          <div class="slide-number">08</div>
+          <button class="back-to-agenda">
+            <i class="fas fa-arrow-left"></i> Agenda
+          </button>
+          <h2 class="event-title animate">Keynote Lecture 2</h2>
+          <div class="event-title-arabic animate">
+            المحاضرة الرئيسية الثانية
+          </div>
+          <div class="event-time animate">
+            <i class="fas fa-clock"></i> 11:45 AM - 12:15 PM
+          </div>
+
+          <div class="topic-card animate">
+            <h3 class="topic-title">
+              THE BENEFITS AND VIRTUES OF SEEKING KNOWLEDGE
+            </h3>
+            <div class="topic-title-arabic">طلب العلم فوائد وفضائله</div>
+
+            <div class="lecturer-card">
+              <div class="lecturer-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="lecturer-details">
+                <h3 class="lecturer-name">Muhammad Musa Babalola</h3>
+                <div class="lecturer-title">
+                  Director, University Institute of Education and Culture
+                </div>
+                <div class="lecturer-bio">
+                  Dr. Babalola is a distinguished scholar with over 20 years of
+                  experience in Islamic education. As the director of the
+                  University Institute of Education and Culture, he has
+                  pioneered innovative approaches to Islamic pedagogy. A
+                  graduate of Al-Azhar University, he holds a PhD in Islamic
+                  Sciences with a specialization in Educational Methodology.
+                  <br /><br />
+                  His groundbreaking work on the revival of Islamic learning
+                  traditions has been published in numerous academic journals.
+                  Dr. Babalola is particularly known for his ability to connect
+                  classical Islamic scholarship with modern educational theory,
+                  making him a sought-after speaker at international
+                  conferences.
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-abstract">
+              <p>
+                <strong>Abstract:</strong> In this inspiring lecture, Dr.
+                Babalola will explore the profound spiritual and worldly
+                benefits of seeking Islamic knowledge, drawing from the Quran,
+                Sunnah, and the wisdom of the Salaf. Key topics include:
+              </p>
+              <ul style="margin-top: 15px; padding-left: 20px">
+                <li>
+                  Knowledge as a path to Allah's pleasure and a means of
+                  spiritual elevation
+                </li>
+                <li>
+                  The unique status of scholars in Islamic tradition and
+                  contemporary society
+                </li>
+                <li>How knowledge transforms individuals and communities</li>
+                <li>
+                  The protection against misguidance that comes with sound
+                  knowledge
+                </li>
+                <li>
+                  Knowledge as a form of ongoing charity (Sadaqah Jariyah)
+                </li>
+              </ul>
+              <p style="margin-top: 15px">
+                This lecture will reignite the love for learning in attendees
+                and remind graduates of the noble tradition they are continuing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more slides for other agenda items here -->
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+      <div class="dot active" data-target="cover" data-title="Cover"></div>
+      <div class="dot" data-target="agenda" data-title="Agenda"></div>
+      <div class="dot" data-target="slide1" data-title="Opening Prayer"></div>
+      <div
+        class="dot"
+        data-target="slide2"
+        data-title="Qur'an Recitation"
+      ></div>
+      <div class="dot" data-target="slide3" data-title="Academy Intro"></div>
+      <div class="dot" data-target="slide5" data-title="Welcome Address"></div>
+      <div class="dot" data-target="slide6" data-title="Graduands"></div>
+      <div class="dot" data-target="slide7" data-title="Lecture 1"></div>
+      <div class="dot" data-target="slide8" data-title="Lecture 2"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control-btn" id="prev-btn">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+      <div class="control-btn" id="next-btn">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+
+    <!-- Mobile Swipe Indicator -->
+    <div class="swipe-indicator animate">
+      <i class="fas fa-arrow-left"></i> Swipe to navigate
+      <i class="fas fa-arrow-right"></i>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

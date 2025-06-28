@@ -1,0 +1,720 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1b0c5e; /* Deep blue */
+  --secondary: #2d6a4f; /* Medium green */
+  --accent: #d4a017; /* Gold */
+  --light: #ffffff; /* White */
+  --dark: #0d0a1c; /* Dark blue */
+  --arabic-font: "Amiri", serif;
+  --english-font: "Poppins", sans-serif;
+  --transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body {
+  font-family: var(--english-font);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  color: var(--light);
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  touch-action: pan-y;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 C40,0 60,0 80,20 C100,40 100,60 80,80 C60,100 40,100 20,80 C0,60 0,40 20,20 Z" fill="none" stroke="%23d4a017" stroke-width="0.5" opacity="0.2"/></svg>');
+  background-size: 200px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.presentation-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: var(--transition);
+  z-index: 1;
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+  pointer-events: all;
+}
+
+.slide-content {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(27, 12, 94, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid rgba(212, 160, 23, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.slide-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.slide-content::-webkit-scrollbar-track {
+  background: rgba(27, 12, 94, 0.5);
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.slide-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+
+.slide-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 3px 12px;
+}
+
+.back-to-agenda {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(212, 160, 23, 0.2);
+  color: var(--accent);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+.back-to-agenda:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.event-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.event-title-arabic {
+  font-family: var(--arabic-font);
+  font-size: 2rem;
+  color: var(--light);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.event-desc {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.event-time {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cover-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--light);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.cover-subtitle {
+  font-family: var(--arabic-font);
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.academy-name {
+  font-family: var(--arabic-font);
+  font-size: 2.2rem;
+  color: var(--light);
+  margin-bottom: 15px;
+}
+
+.date-time {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.agenda-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  position: relative;
+  overflow: hidden;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.agenda-item:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 160, 23, 0.15);
+  border-color: var(--accent);
+}
+
+.agenda-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--accent);
+  color: var(--primary);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.agenda-title {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin: 10px 0 5px;
+}
+
+.agenda-time {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+.lecturer-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  gap: 20px;
+  border-left: 4px solid var(--accent);
+}
+
+.lecturer-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary), var(--dark));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.lecturer-details {
+  flex: 1;
+}
+
+.lecturer-name {
+  font-size: 1.7rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.lecturer-title {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px;
+}
+
+.lecturer-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.topic-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: left;
+  border-left: 4px solid var(--accent);
+}
+
+.topic-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.topic-title-arabic {
+  font-family: var(--arabic-font);
+  font-size: 1.5rem;
+  color: var(--light);
+  margin-bottom: 10px;
+  text-align: right;
+  direction: rtl;
+}
+
+.topic-abstract {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.graduands-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.graduand-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.graduand-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.graduand-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary), var(--dark));
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  color: var(--accent);
+}
+
+.graduand-name {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.graduand-name-arabic {
+  font-family: var(--arabic-font);
+  font-size: 1.4rem;
+  color: var(--light);
+  margin-bottom: 10px;
+}
+
+.graduand-details {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.director-message {
+  background: rgba(212, 160, 23, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+  border-left: 4px solid var(--accent);
+}
+
+.director-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.message-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.signature {
+  text-align: right;
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* Logo */
+.logo-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.cover-logo {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  font-family: var(--arabic-font);
+  font-size: 1rem;
+  color: var(--accent);
+  text-align: center;
+  margin-top: 5px;
+  max-width: 120px;
+  line-height: 1.3;
+}
+
+/* Navigation Dots */
+.nav-dots {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.dot.active {
+  background-color: var(--accent);
+  transform: scale(1.3);
+}
+
+.dot::after {
+  content: attr(data-title);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dot:hover::after {
+  opacity: 1;
+}
+
+/* Controls */
+.controls {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 100;
+}
+
+.control-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+}
+
+.control-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.slide.active .animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+/* Mobile Swipe */
+.swipe-indicator {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .agenda-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .lecturer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cover-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    padding: 25px 15px;
+  }
+
+  .cover-title {
+    font-size: 2.5rem;
+  }
+
+  .cover-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .academy-name {
+    font-size: 1.8rem;
+  }
+
+  .event-title {
+    font-size: 1.9rem;
+  }
+
+  .event-title-arabic {
+    font-size: 1.7rem;
+  }
+
+  .event-desc {
+    font-size: 1.1rem;
+  }
+
+  .graduands-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-logo {
+    height: 80px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .agenda-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-dots {
+    display: none;
+  }
+
+  .swipe-indicator {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    padding: 15px;
+  }
+
+  .slide-content {
+    padding: 20px 12px;
+    max-height: 85vh;
+  }
+
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .cover-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .academy-name {
+    font-size: 1.6rem;
+  }
+
+  .event-title {
+    font-size: 1.7rem;
+  }
+
+  .event-title-arabic {
+    font-size: 1.5rem;
+  }
+
+  .date-time {
+    font-size: 1.3rem;
+    gap: 5px;
+  }
+
+  .cover-logo {
+    height: 70px;
+  }
+
+  .event-time {
+    font-size: 1.2rem;
+  }
+
+  .lecturer-card {
+    padding: 15px;
+  }
+
+  .lecturer-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .lecturer-name {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    bottom: 10px;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
