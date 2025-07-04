@@ -428,6 +428,90 @@ body::before {
   font-size: 1.1rem;
 }
 
+/* Donation specific styles */
+.donation-details {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border: 2px solid rgba(212, 160, 23, 0.3);
+  text-align: center;
+}
+
+.donation-title {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.donation-title-arabic {
+  font-family: var(--arabic-font);
+  font-size: 1.8rem;
+  color: var(--light);
+  margin-bottom: 25px;
+}
+
+.account-info {
+  text-align: left;
+  background: rgba(27, 12, 94, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.account-info p {
+  font-size: 1.2rem;
+  margin: 12px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.account-info p i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: var(--accent);
+  width: 20px;
+  text-align: center;
+}
+
+.donation-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.method-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  transition: var(--transition);
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 160, 23, 0.1);
+  border-color: var(--accent);
+}
+
+.method-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.method-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
 /* Logo */
 .logo-container {
   position: absolute;
@@ -649,6 +733,15 @@ body::before {
   .swipe-indicator {
     display: flex;
   }
+
+  .donation-details {
+    padding: 20px 15px;
+  }
+
+  .donation-methods {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -716,5 +809,13 @@ body::before {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+
+  .donation-title {
+    font-size: 1.8rem;
+  }
+
+  .account-info p {
+    font-size: 1.1rem;
   }
 }
